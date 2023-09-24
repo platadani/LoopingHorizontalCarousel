@@ -1,3 +1,7 @@
+### ⏳ Demo
+
+https://github.com/platadani/LoopingHorizontalCarousel/assets/26348933/b83dcd1d-09ec-46ce-bfaf-3d3028c9efd1
+
 ### ⏳ Installation
     
 #### [Swift Package Manager][SPM]
