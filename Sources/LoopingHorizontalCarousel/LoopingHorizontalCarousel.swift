@@ -44,14 +44,12 @@ public struct LoopingHorizontalCarousel: View {
 
     public init(elements: [CarouselElement],
                 speed: Double = 8,
-                repeatsNumber: Int = 20,
                 spacing: CGFloat = 20,
                 backgroundColor: Color = .gray,
                 foregroundColor: Color = .black,
                 scrollable: Bool = false) {
         self.elements = elements
         self.speed = speed
-        self.repeatsNumber = repeatsNumber
         self.spacing = spacing
         self.backgroundColor = backgroundColor
         self.foregroundColor = foregroundColor
@@ -92,7 +90,7 @@ public struct LoopingHorizontalCarousel: View {
             .onAppear() {
                 let totalWidth = CGFloat(itemCount) * (itemWidth + spacing)
                 let screenWidth = geometry.size.width
-                let duration = Double(totalWidth / screenWidth) / (speed * 0.1)// Ajusta la velocidad
+                let duration = Double(totalWidth / screenWidth) / (speed * 0.1) // Adjusts the speed
                 withAnimation(Animation.linear(duration: duration).repeatForever(autoreverses: false)) {
                     scrollOffset = totalWidth
                 }
